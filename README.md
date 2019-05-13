@@ -11,6 +11,8 @@
 
 腾讯步行导航 SDK 是一款针对步行在线导航的产品。该产品能够提供路径规划、模拟导航、实时导航、导航设置、自定义导航界面等功能，力求为用户提供更加人性化的导航服务。
 
+一体化导航 SDK 下载请联系腾讯位置服务：[https://lbs.qq.com/contractus.html](https://lbs.qq.com/contractus.html)
+
 <div id="ProjectConfig"></div>
 
 ### 工程配置
@@ -19,7 +21,7 @@
 
 (1) 若使用实时导航，则需要在` info.list` 中添加 NSLocationWhenInUseUsageDescription 和 NSLocationAlwaysUsageDescription 字段。
 
-(2) 如果需要后台定位，需在IOS 9.0及以后设置 allowBackgroundLocationUpdates 为 YES，此时必须保证 `TARGETS->Capabilities->Background Modes->Location updates` 处于选中状态。
+(2) 如果需要后台定位，需在 iOS 9.0及以后设置 allowBackgroundLocationUpdates 为 YES，此时必须保证 `TARGETS->Capabilities->Background Modes->Location updates` 处于选中状态。
 
 #### 2. 引入 SDK
 
