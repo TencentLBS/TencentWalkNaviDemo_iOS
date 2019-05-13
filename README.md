@@ -353,9 +353,9 @@ self.walkNaviView.routeLineWidth = 12;
 
 ```objc
 // 设置 3D 导航模式下用户位置位于地图宽高的比例，默认 x 为 0.5，y 为 0.75，取值范围为 [0.25, 0.75]，超过则取默认值
-self.carNaviView.TWNWalkNaviFixUserLocationProportion3D = CGPointMake(0.5, 0.75);
+self.walkNaviView.TWNWalkNaviFixUserLocationProportion3D = CGPointMake(0.5, 0.75);
 // 设置 2D 导航模式下用户位置位于地图宽高的比例，默认 x 为 0.5，y 为 0.75，取值范围为 [0.25, 0.75]，超过则取默认值
-self.carNaviView.TWNWalkNaviFixUserLocationProportion2D = CGPointMake(0.5, 0.75);
+self.walkNaviView.TWNWalkNaviFixUserLocationProportion2D = CGPointMake(0.5, 0.75);
 ```
 
 <div id="NaviData"></div>
