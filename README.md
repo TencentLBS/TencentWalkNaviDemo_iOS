@@ -89,15 +89,15 @@ self.walkManager = [[TWNWalkNaviManager alloc] init];
 // 起点
 TWNWalkRouteSearchNaviPoi *start = [[TWNWalkRouteSearchNaviPoi alloc] init];
 {
-	start.floorName  = @"F4";
-	start.buildingID = @"1100005175";
-	start.coordinate = CLLocationCoordinate2DMake(39.958548,116.288687);
+    start.floorName  = @"F4";
+    start.buildingID = @"1100005175";
+    start.coordinate = CLLocationCoordinate2DMake(39.958548,116.288687);
 }
 
 // 终点    
 TWNWalkRouteSearchNaviPoi *destination = [[TWNWalkRouteSearchNaviPoi alloc] init];
 {
-	destination.coordinate = CLLocationCoordinate2DMake(39.958348,116.282312);
+    destination.coordinate = CLLocationCoordinate2DMake(39.958348,116.282312);
 }
 
 // 请求
@@ -290,11 +290,11 @@ self.walkNaviView.delegate = self;
 ```objc
 [self.walkManager searchNavigationRoutesWithRequest:request completion:^(TWNWalkRouteSearchResult *result, NSError *error)
 {
-	if(error == nil)
-	{
-		// 获取线路数据后使用第一条线路进行导航
-		[self.walkManager startWithIndex:0];
-	}
+    if(error == nil)
+    {
+        // 获取线路数据后使用第一条线路进行导航
+        [self.walkManager startWithIndex:0];
+    }
 }];
 ```
 
