@@ -6,6 +6,7 @@
 - [导航](#Navi)
 - [导航设置](#NaviConfig)
 - [获取导航数据](#NaviData)
+- [自定义导航面板](#CustomNaviUI)
 
 ### 介绍
 
@@ -441,4 +442,75 @@ self.walkNaviView.naviMapView.delegate = self;
 
 ```objc
 [self.walkManager registerNaviDelegate: self.walkNaviView];
+```
+
+<div id="CustomNaviUI"></div>
+
+### 自定义导航面板
+
+**1. 关闭默认面板，注册回调**
+
+```objc
+- (void)setupSelf
+{
+    self.walkNaviView.hideNavigationPanel = YES;
+    [self.walkNaviManager registerUIDelegate:self];
+}
+```
+
+**2. 添加自定义面板**
+
+```objc
+- (void)setupViews
+{
+    _backgroundView = [[UIView alloc] init];
+    {
+        _backgroundView.backgroundColor = UIColor.lightGrayColor;
+        _backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    [self.view addSubview:_backgroundView];
+    
+    _guideLabel = [[UILabel alloc] init];
+    {
+        _guideLabel.textColor = UIColor.whiteColor;
+        _guideLabel.font = [UIFont boldSystemFontOfSize:22];
+        _guideLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    [_backgroundView addSubview:_guideLabel];
+    
+    _intersectionImageView = [[UIImageView alloc] init];
+    {
+        _intersectionImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _intersectionImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    [_backgroundView addSubview:_intersectionImageView];
+}
+
+- (void)setupConstraints
+{
+    [_backgroundView.heightAnchor constraintEqualToConstant:100].active = YES;
+    [_backgroundView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [_backgroundView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    [_backgroundView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+    
+    [_intersectionImageView.heightAnchor constraintEqualToConstant:80].active = YES;
+    [_intersectionImageView.widthAnchor constraintEqualToConstant:80].active = YES;
+    [_intersectionImageView.centerYAnchor constraintEqualToAnchor:_backgroundView.centerYAnchor].active = YES;
+    [_intersectionImageView.leadingAnchor constraintEqualToAnchor:_backgroundView.leadingAnchor constant:10].active = YES;
+    
+    [_guideLabel.centerYAnchor constraintEqualToAnchor:_backgroundView.centerYAnchor].active = YES;
+    [_guideLabel.leadingAnchor constraintEqualToAnchor:_intersectionImageView.trailingAnchor constant:40].active = YES;
+}
+```
+
+**3. 实现回调**
+
+使用 `TWNWalkNaviUIDelegate` 协议获取数据。
+
+```objc
+- (void)walkNavigationManager:(TWNWalkNaviManager *)manager updateNavigationData:(TWNWalkNavigationData *)data
+{
+    _intersectionImageView.image = data.intersectionImage;
+    _guideLabel.text = [NSString stringWithFormat:@"%@%@后    %@", data.nextDistanceLeftString, data.nextDistanceLeftUnit, data.intersectionActionString];
+}
 ```
