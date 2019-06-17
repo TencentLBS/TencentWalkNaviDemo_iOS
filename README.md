@@ -1,5 +1,3 @@
-# 一体化导航SDK
-
 # 目录
 - [工程配置](#ProjectConfig)
 - [步行路径规划](#NaviPlan)
@@ -7,12 +5,10 @@
 - [导航设置](#NaviConfig)
 - [获取导航数据](#NaviData)
 - [自定义导航面板](#CustomNaviUI)
-
+- 
 ### 介绍
 
 腾讯步行导航 SDK 是一款针对步行在线导航的产品。该产品能够提供路径规划、模拟导航、实时导航、导航设置、自定义导航界面等功能，力求为用户提供更加人性化的导航服务。
-
-一体化导航 SDK 下载请联系腾讯位置服务：[https://lbs.qq.com/contractus.html](https://lbs.qq.com/contractus.html)
 
 <div id="ProjectConfig"></div>
 
@@ -20,21 +16,28 @@
 
 #### 1. 权限申请
 
-(1) 若使用实时导航，则需要在` info.list` 中添加 NSLocationWhenInUseUsageDescription 和 NSLocationAlwaysUsageDescription 字段。
+(1) 若使用实时导航，则需要在 `info.list` 中添加 NSLocationWhenInUseUsageDescription 和 NSLocationAlwaysUsageDescription 字段。
 
 (2) 如果需要后台定位，需在 iOS 9.0及以后设置 allowBackgroundLocationUpdates 为 YES，此时必须保证 `TARGETS->Capabilities->Background Modes->Location updates` 处于选中状态。
 
 #### 2. 引入 SDK
 
 在 `TARGETS->Build Phases->Link Binary Libraries` 中添加步行导航 SDK `TWNNavigationKit.framework`，在 `TARGETS->Build Phases->Copy Bundle Resources` 中添加资源文件 `TencentNavigationKit.bundle`。
+
 由于步行导航 SDK 依赖地图 SDK，还需要依照 [http://lbs.qq.com/ios_v1/guide-project-setup.html](http://lbs.qq.com/ios_v1/guide-project-setup.html) 添加地图 SDK。
 
 #### 3. 申请和设置开发密钥
 
-前往 [http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html) 申请开发密钥，在 QMapServices 的 APIKey 属性上设置。
+前往 [http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html) 申请地图开发密钥，在 QMapServices 的 APIKey 属性上设置。
 
 ```objc
-[QMapServices sharedServices].APIKey = @"您的key";
+[QMapServices sharedServices].APIKey = @"您的 Key";
+```
+
+联系腾讯位置服务 [https://lbs.qq.com/contractus.html](https://lbs.qq.com/contractus.html) 申请步行导航开发密钥， 在 TWNNaviServices 的 APIKey 属性上设置。
+
+```objc
+[TWNNaviServices sharedServices].APIKey = @"您的 Key";
 ```
 
 <div id="NaviPlan"></div>
@@ -80,7 +83,11 @@
 - 2008：算路超时
 - 2999：服务器内部错误
 
-#### 示例
+#### 图片示例
+
+![](Images/1.png)
+
+#### 代码示例
 
 ```objc
 // 初始化
@@ -89,15 +96,15 @@ self.walkManager = [[TWNWalkNaviManager alloc] init];
 // 起点
 TWNWalkRouteSearchNaviPoi *start = [[TWNWalkRouteSearchNaviPoi alloc] init];
 {
-    start.floorName  = @"F4";
-    start.buildingID = @"1100005175";
-    start.coordinate = CLLocationCoordinate2DMake(39.958548,116.288687);
+	start.floorName  = @"F4";
+	start.buildingID = @"1100005175";
+	start.coordinate = CLLocationCoordinate2DMake(39.958548,116.288687);
 }
 
 // 终点    
 TWNWalkRouteSearchNaviPoi *destination = [[TWNWalkRouteSearchNaviPoi alloc] init];
 {
-    destination.coordinate = CLLocationCoordinate2DMake(39.958348,116.282312);
+	destination.coordinate = CLLocationCoordinate2DMake(39.958348,116.282312);
 }
 
 // 请求
@@ -290,11 +297,11 @@ self.walkNaviView.delegate = self;
 ```objc
 [self.walkManager searchNavigationRoutesWithRequest:request completion:^(TWNWalkRouteSearchResult *result, NSError *error)
 {
-    if(error == nil)
-    {
-        // 获取线路数据后使用第一条线路进行导航
-        [self.walkManager startWithIndex:0];
-    }
+	if(error == nil)
+	{
+		// 获取线路数据后使用第一条线路进行导航
+		[self.walkManager startWithIndex:0];
+	}
 }];
 ```
 
@@ -313,6 +320,10 @@ self.walkNaviView.delegate = self;
 ```
 
 <div id="NaviConfig"></div>
+
+#### 图片示例
+
+![](Images/2.png)
 
 ### 导航设置
 
@@ -514,3 +525,7 @@ self.walkNaviView.naviMapView.delegate = self;
     _guideLabel.text = [NSString stringWithFormat:@"%@%@后    %@", data.nextDistanceLeftString, data.nextDistanceLeftUnit, data.intersectionActionString];
 }
 ```
+
+#### 图片示例
+
+![](Images/3.png)

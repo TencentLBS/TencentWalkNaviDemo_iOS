@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BD310DD22855AB900BFA3B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD310DC22855AB900BFA3B6 /* AppDelegate.m */; };
+		7BD310E522855ABA00BFA3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD310E422855ABA00BFA3B6 /* Assets.xcassets */; };
+		7BD310E822855ABA00BFA3B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD310E622855ABA00BFA3B6 /* LaunchScreen.storyboard */; };
+		7BD310EB22855ABA00BFA3B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD310EA22855ABA00BFA3B6 /* main.m */; };
+		7BD3110C22855B0B00BFA3B6 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD310F422855B0B00BFA3B6 /* EntryViewController.m */; };
+		7BD3110D22855B0B00BFA3B6 /* EntryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD310F522855B0B00BFA3B6 /* EntryData.m */; };
+		7BD3110E22855B0B00BFA3B6 /* BaseNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD310F722855B0B00BFA3B6 /* BaseNaviViewController.m */; };
+		7BD3111A22855C1700BFA3B6 /* TWNNavigationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD3111922855C1700BFA3B6 /* TWNNavigationKit.framework */; };
+		7BD3111D22855C1D00BFA3B6 /* TencentWalkNavigation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7BD3111C22855C1D00BFA3B6 /* TencentWalkNavigation.bundle */; };
+		7BD3111F22855C9900BFA3B6 /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7BD3111E22855C9900BFA3B6 /* QMapKit.bundle */; };
+		7BD3112422855CCA00BFA3B6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD3112322855CCA00BFA3B6 /* libsqlite3.0.tbd */; };
+		7BD3112622855CE200BFA3B6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD3112522855CE200BFA3B6 /* libc++.tbd */; };
+		7BD3112822855D2500BFA3B6 /* TencentLBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD3112722855D2500BFA3B6 /* TencentLBS.framework */; };
+		7BD3112A228563A100BFA3B6 /* QMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD31129228563A100BFA3B6 /* QMapKit.framework */; };
+		7BD3113A2289705200BFA3B6 /* NaviModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD311372289705200BFA3B6 /* NaviModeController.m */; };
+		7BD3113D22897AD600BFA3B6 /* NaviUserLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3113C22897AD600BFA3B6 /* NaviUserLocationController.m */; };
+		7BD3114022897C6F00BFA3B6 /* NaviRouteWidthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3113E22897C6F00BFA3B6 /* NaviRouteWidthController.m */; };
+		7BD31150228A9FF400BFA3B6 /* NaviPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3114D228A9FF400BFA3B6 /* NaviPanelController.m */; };
+		7BD31159228AA05A00BFA3B6 /* NaviSearchRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD31154228AA05A00BFA3B6 /* NaviSearchRoutes.m */; };
+		7BD3115A228AA05A00BFA3B6 /* SimuNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD31157228AA05A00BFA3B6 /* SimuNaviController.m */; };
+		7BD3115B228AA05A00BFA3B6 /* RealNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD31158228AA05A00BFA3B6 /* RealNaviController.m */; };
+		7BD3115E228AA5F500BFA3B6 /* CustomNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3115C228AA5F500BFA3B6 /* CustomNaviController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BD310D822855AB900BFA3B6 /* TencentWalkNaviDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TencentWalkNaviDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD310DB22855AB900BFA3B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BD310DC22855AB900BFA3B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7BD310E422855ABA00BFA3B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BD310E722855ABA00BFA3B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BD310E922855ABA00BFA3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD310EA22855ABA00BFA3B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BD310F222855B0B00BFA3B6 /* EntryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryData.h; sourceTree = "<group>"; };
+		7BD310F322855B0B00BFA3B6 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		7BD310F422855B0B00BFA3B6 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		7BD310F522855B0B00BFA3B6 /* EntryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryData.m; sourceTree = "<group>"; };
+		7BD310F722855B0B00BFA3B6 /* BaseNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNaviViewController.m; sourceTree = "<group>"; };
+		7BD3110B22855B0B00BFA3B6 /* BaseNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNaviViewController.h; sourceTree = "<group>"; };
+		7BD3111922855C1700BFA3B6 /* TWNNavigationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TWNNavigationKit.framework; sourceTree = "<group>"; };
+		7BD3111C22855C1D00BFA3B6 /* TencentWalkNavigation.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentWalkNavigation.bundle; sourceTree = "<group>"; };
+		7BD3111E22855C9900BFA3B6 /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QMapKit.bundle; sourceTree = "<group>"; };
+		7BD3112322855CCA00BFA3B6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		7BD3112522855CE200BFA3B6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7BD3112722855D2500BFA3B6 /* TencentLBS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentLBS.framework; sourceTree = "<group>"; };
+		7BD31129228563A100BFA3B6 /* QMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QMapKit.framework; sourceTree = "<group>"; };
+		7BD311342289705200BFA3B6 /* NaviModeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviModeController.h; sourceTree = "<group>"; };
+		7BD311372289705200BFA3B6 /* NaviModeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviModeController.m; sourceTree = "<group>"; };
+		7BD3113B22897AD600BFA3B6 /* NaviUserLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviUserLocationController.h; sourceTree = "<group>"; };
+		7BD3113C22897AD600BFA3B6 /* NaviUserLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviUserLocationController.m; sourceTree = "<group>"; };
+		7BD3113E22897C6F00BFA3B6 /* NaviRouteWidthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviRouteWidthController.m; sourceTree = "<group>"; };
+		7BD3113F22897C6F00BFA3B6 /* NaviRouteWidthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviRouteWidthController.h; sourceTree = "<group>"; };
+		7BD3114D228A9FF400BFA3B6 /* NaviPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviPanelController.m; sourceTree = "<group>"; };
+		7BD3114F228A9FF400BFA3B6 /* NaviPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviPanelController.h; sourceTree = "<group>"; };
+		7BD31153228AA05A00BFA3B6 /* SimuNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimuNaviController.h; sourceTree = "<group>"; };
+		7BD31154228AA05A00BFA3B6 /* NaviSearchRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviSearchRoutes.m; sourceTree = "<group>"; };
+		7BD31155228AA05A00BFA3B6 /* RealNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealNaviController.h; sourceTree = "<group>"; };
+		7BD31156228AA05A00BFA3B6 /* NaviSearchRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviSearchRoutes.h; sourceTree = "<group>"; };
+		7BD31157228AA05A00BFA3B6 /* SimuNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimuNaviController.m; sourceTree = "<group>"; };
+		7BD31158228AA05A00BFA3B6 /* RealNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealNaviController.m; sourceTree = "<group>"; };
+		7BD3115C228AA5F500BFA3B6 /* CustomNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNaviController.m; sourceTree = "<group>"; };
+		7BD3115D228AA5F500BFA3B6 /* CustomNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNaviController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BD310D522855AB900BFA3B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD3112622855CE200BFA3B6 /* libc++.tbd in Frameworks */,
+				7BD3112422855CCA00BFA3B6 /* libsqlite3.0.tbd in Frameworks */,
+				7BD3112A228563A100BFA3B6 /* QMapKit.framework in Frameworks */,
+				7BD3112822855D2500BFA3B6 /* TencentLBS.framework in Frameworks */,
+				7BD3111A22855C1700BFA3B6 /* TWNNavigationKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BD310CF22855AB900BFA3B6 = {
+			isa = PBXGroup;
+			children = (
+				7BD310DA22855AB900BFA3B6 /* TencentWalkNaviDemo */,
+				7BD310D922855AB900BFA3B6 /* Products */,
+				7BD3112222855CCA00BFA3B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BD310D922855AB900BFA3B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD310D822855AB900BFA3B6 /* TencentWalkNaviDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BD310DA22855AB900BFA3B6 /* TencentWalkNaviDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3111B22855C1D00BFA3B6 /* Resources */,
+				7BD3111822855C1700BFA3B6 /* library */,
+				7BD310F122855B0B00BFA3B6 /* Demos */,
+				7BD310DB22855AB900BFA3B6 /* AppDelegate.h */,
+				7BD310DC22855AB900BFA3B6 /* AppDelegate.m */,
+				7BD310E422855ABA00BFA3B6 /* Assets.xcassets */,
+				7BD310E622855ABA00BFA3B6 /* LaunchScreen.storyboard */,
+				7BD310E922855ABA00BFA3B6 /* Info.plist */,
+				7BD310EA22855ABA00BFA3B6 /* main.m */,
+			);
+			path = TencentWalkNaviDemo;
+			sourceTree = "<group>";
+		};
+		7BD310F122855B0B00BFA3B6 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				7BD310F222855B0B00BFA3B6 /* EntryData.h */,
+				7BD310F522855B0B00BFA3B6 /* EntryData.m */,
+				7BD310F322855B0B00BFA3B6 /* EntryViewController.h */,
+				7BD310F422855B0B00BFA3B6 /* EntryViewController.m */,
+				7BD310F622855B0B00BFA3B6 /* Controllers */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		7BD310F622855B0B00BFA3B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3110B22855B0B00BFA3B6 /* BaseNaviViewController.h */,
+				7BD310F722855B0B00BFA3B6 /* BaseNaviViewController.m */,
+				7BD31152228AA05A00BFA3B6 /* Navi */,
+				7BD311312289705200BFA3B6 /* Setting */,
+				7BD3114B228A9FF400BFA3B6 /* UI */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7BD3111822855C1700BFA3B6 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				7BD31129228563A100BFA3B6 /* QMapKit.framework */,
+				7BD3112722855D2500BFA3B6 /* TencentLBS.framework */,
+				7BD3111922855C1700BFA3B6 /* TWNNavigationKit.framework */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		7BD3111B22855C1D00BFA3B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3111E22855C9900BFA3B6 /* QMapKit.bundle */,
+				7BD3111C22855C1D00BFA3B6 /* TencentWalkNavigation.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7BD3112222855CCA00BFA3B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3112522855CE200BFA3B6 /* libc++.tbd */,
+				7BD3112322855CCA00BFA3B6 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BD311312289705200BFA3B6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				7BD311342289705200BFA3B6 /* NaviModeController.h */,
+				7BD311372289705200BFA3B6 /* NaviModeController.m */,
+				7BD3113B22897AD600BFA3B6 /* NaviUserLocationController.h */,
+				7BD3113C22897AD600BFA3B6 /* NaviUserLocationController.m */,
+				7BD3113F22897C6F00BFA3B6 /* NaviRouteWidthController.h */,
+				7BD3113E22897C6F00BFA3B6 /* NaviRouteWidthController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		7BD3114B228A9FF400BFA3B6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7BD3114F228A9FF400BFA3B6 /* NaviPanelController.h */,
+				7BD3114D228A9FF400BFA3B6 /* NaviPanelController.m */,
+				7BD3115D228AA5F500BFA3B6 /* CustomNaviController.h */,
+				7BD3115C228AA5F500BFA3B6 /* CustomNaviController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7BD31152228AA05A00BFA3B6 /* Navi */ = {
+			isa = PBXGroup;
+			children = (
+				7BD31156228AA05A00BFA3B6 /* NaviSearchRoutes.h */,
+				7BD31154228AA05A00BFA3B6 /* NaviSearchRoutes.m */,
+				7BD31155228AA05A00BFA3B6 /* RealNaviController.h */,
+				7BD31158228AA05A00BFA3B6 /* RealNaviController.m */,
+				7BD31153228AA05A00BFA3B6 /* SimuNaviController.h */,
+				7BD31157228AA05A00BFA3B6 /* SimuNaviController.m */,
+			);
+			path = Navi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BD310D722855AB900BFA3B6 /* TencentWalkNaviDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD310EE22855ABA00BFA3B6 /* Build configuration list for PBXNativeTarget "TencentWalkNaviDemo" */;
+			buildPhases = (
+				7BD310D422855AB900BFA3B6 /* Sources */,
+				7BD310D522855AB900BFA3B6 /* Frameworks */,
+				7BD310D622855AB900BFA3B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TencentWalkNaviDemo;
+			productName = TencentWalkNaviDemo;
+			productReference = 7BD310D822855AB900BFA3B6 /* TencentWalkNaviDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BD310D022855AB900BFA3B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Tencent;
+				TargetAttributes = {
+					7BD310D722855AB900BFA3B6 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7BD310D322855AB900BFA3B6 /* Build configuration list for PBXProject "TencentWalkNaviDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BD310CF22855AB900BFA3B6;
+			productRefGroup = 7BD310D922855AB900BFA3B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BD310D722855AB900BFA3B6 /* TencentWalkNaviDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BD310D622855AB900BFA3B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD310E822855ABA00BFA3B6 /* LaunchScreen.storyboard in Resources */,
+				7BD3111F22855C9900BFA3B6 /* QMapKit.bundle in Resources */,
+				7BD310E522855ABA00BFA3B6 /* Assets.xcassets in Resources */,
+				7BD3111D22855C1D00BFA3B6 /* TencentWalkNavigation.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BD310D422855AB900BFA3B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD310EB22855ABA00BFA3B6 /* main.m in Sources */,
+				7BD3115A228AA05A00BFA3B6 /* SimuNaviController.m in Sources */,
+				7BD31159228AA05A00BFA3B6 /* NaviSearchRoutes.m in Sources */,
+				7BD3113D22897AD600BFA3B6 /* NaviUserLocationController.m in Sources */,
+				7BD3110C22855B0B00BFA3B6 /* EntryViewController.m in Sources */,
+				7BD3113A2289705200BFA3B6 /* NaviModeController.m in Sources */,
+				7BD3110D22855B0B00BFA3B6 /* EntryData.m in Sources */,
+				7BD3114022897C6F00BFA3B6 /* NaviRouteWidthController.m in Sources */,
+				7BD310DD22855AB900BFA3B6 /* AppDelegate.m in Sources */,
+				7BD3115E228AA5F500BFA3B6 /* CustomNaviController.m in Sources */,
+				7BD3115B228AA05A00BFA3B6 /* RealNaviController.m in Sources */,
+				7BD3110E22855B0B00BFA3B6 /* BaseNaviViewController.m in Sources */,
+				7BD31150228A9FF400BFA3B6 /* NaviPanelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BD310E622855ABA00BFA3B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD310E722855ABA00BFA3B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BD310EC22855ABA00BFA3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7BD310ED22855ABA00BFA3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BD310EF22855ABA00BFA3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J57QEZ3JMV;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TencentWalkNaviDemo/library",
+				);
+				INFOPLIST_FILE = TencentWalkNaviDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.TencentWalkNaviDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BD310F022855ABA00BFA3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J57QEZ3JMV;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TencentWalkNaviDemo/library",
+				);
+				INFOPLIST_FILE = TencentWalkNaviDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.TencentWalkNaviDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BD310D322855AB900BFA3B6 /* Build configuration list for PBXProject "TencentWalkNaviDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD310EC22855ABA00BFA3B6 /* Debug */,
+				7BD310ED22855ABA00BFA3B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD310EE22855ABA00BFA3B6 /* Build configuration list for PBXNativeTarget "TencentWalkNaviDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD310EF22855ABA00BFA3B6 /* Debug */,
+				7BD310F022855ABA00BFA3B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BD310D022855AB900BFA3B6 /* Project object */;
+}
