@@ -5,7 +5,7 @@
 - [导航设置](#NaviConfig)
 - [获取导航数据](#NaviData)
 - [自定义导航面板](#CustomNaviUI)
-- 
+
 ### 介绍
 
 腾讯步行导航 SDK 是一款针对步行在线导航的产品。该产品能够提供路径规划、模拟导航、实时导航、导航设置、自定义导航界面等功能，力求为用户提供更加人性化的导航服务。
@@ -85,7 +85,7 @@
 
 #### 图片示例
 
-![](Images/1.png)
+<img src="./Images/1.PNG">
 
 #### 代码示例
 
@@ -323,7 +323,7 @@ self.walkNaviView.delegate = self;
 
 #### 图片示例
 
-![](Images/2.png)
+<img src="./Images/2.PNG">
 
 ### 导航设置
 
@@ -528,4 +528,4 @@ self.walkNaviView.naviMapView.delegate = self;
 
 #### 图片示例
 
-![](Images/3.png)
+<img src="./Images/3.PNG">
