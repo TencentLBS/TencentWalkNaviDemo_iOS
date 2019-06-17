@@ -5,10 +5,11 @@
 - [导航设置](#NaviConfig)
 - [获取导航数据](#NaviData)
 - [自定义导航面板](#CustomNaviUI)
+- [导航语音播报](#NaviTTS)
 
 ### 介绍
 
-腾讯步行导航 SDK 是一款针对步行在线导航的产品。该产品能够提供路径规划、模拟导航、实时导航、导航设置、自定义导航界面等功能，力求为用户提供更加人性化的导航服务。
+腾讯步行导航 SDK 是一款针对步行在线导航的产品。该产品能够提供路径规划、模拟导航、实时导航、导航设置、自定义导航界面、语音播报等功能，力求为用户提供更加人性化的导航服务。
 
 <div id="ProjectConfig"></div>
 
@@ -28,17 +29,14 @@
 
 #### 3. 申请和设置开发密钥
 
-前往 [http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html) 申请地图开发密钥，在 QMapServices 的 APIKey 属性上设置。
+前往 [http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html) 申请密钥，在 QMapServices 与 TWNNaviServices 的 APIKey 属性上设置。
 
 ```objc
 [QMapServices sharedServices].APIKey = @"您的 Key";
-```
-
-联系腾讯位置服务 [https://lbs.qq.com/contractus.html](https://lbs.qq.com/contractus.html) 申请步行导航开发密钥， 在 TWNNaviServices 的 APIKey 属性上设置。
-
-```objc
 [TWNNaviServices sharedServices].APIKey = @"您的 Key";
 ```
+
+联系腾讯位置服务 [https://lbs.qq.com/contractus.html](https://lbs.qq.com/contractus.html) 开通步行导航开发权限。 
 
 <div id="NaviPlan"></div>
 
@@ -529,3 +527,20 @@ self.walkNaviView.naviMapView.delegate = self;
 #### 图片示例
 
 <img src="./Images/3.PNG">
+
+<div id="NaviTTS"></div>
+
+### 导航语音播报
+
+腾讯步行导航 SDK 提供了导航语音播报功能，默认关闭，用户可通过设置 `TWNWalkNaviManager` 的属性 `enableInternalTTS` 开启内置语音播报功能：
+
+```objc
+self.walkNaviManager.enableInternalTTS = YES;
+```
+
+同时，用户可以通过 `TWNWalkNaviDelegate` 协议来获取导航播报的相关信息：
+
+```objc
+// 获取导航 TTS 回调
+- (void)walkNavigationManager:(TWNWalkNaviManager *)manager broadcastTTS:(TWNNaviTTS *)naviTTS;
+```
