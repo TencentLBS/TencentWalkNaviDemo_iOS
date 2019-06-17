@@ -23,6 +23,7 @@
 {
     self.walkNaviManager = [[TWNWalkNaviManager alloc] init];
     [self.walkNaviManager registerNaviDelegate:self];
+    self.walkNaviManager.enableInternalTTS = YES;
 }
 
 - (void)setupWalkNaviView
