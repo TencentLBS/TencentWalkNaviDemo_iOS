@@ -27,6 +27,8 @@
 
 由于步行导航 SDK 依赖地图 SDK，还需要依照 [http://lbs.qq.com/ios_v1/guide-project-setup.html](http://lbs.qq.com/ios_v1/guide-project-setup.html) 添加地图 SDK。
 
+（地图 SDK 文件较大，在 clone 本项目时需参考 [https://git-lfs.github.com/](https://git-lfs.github.com/) 配置 Git LFS）
+
 #### 3. 申请和设置开发密钥
 
 前往 [http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html) 申请密钥，在 QMapServices 与 TWNNaviServices 的 APIKey 属性上设置。
