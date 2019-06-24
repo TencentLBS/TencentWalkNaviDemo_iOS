@@ -15,6 +15,8 @@
 
 ### 工程配置
 
+**本项目中存在大文件，在 clone 时需参考 [https://git-lfs.github.com/](https://git-lfs.github.com/) 配置 Git LFS**
+
 #### 1. 权限申请
 
 (1) 若使用实时导航，则需要在 `info.list` 中添加 NSLocationWhenInUseUsageDescription 和 NSLocationAlwaysUsageDescription 字段。
@@ -26,8 +28,6 @@
 在 `TARGETS->Build Phases->Link Binary Libraries` 中添加步行导航 SDK `TWNNavigationKit.framework`，在 `TARGETS->Build Phases->Copy Bundle Resources` 中添加资源文件 `TencentNavigationKit.bundle`。
 
 由于步行导航 SDK 依赖地图 SDK，还需要依照 [http://lbs.qq.com/ios_v1/guide-project-setup.html](http://lbs.qq.com/ios_v1/guide-project-setup.html) 添加地图 SDK。
-
-（地图 SDK 文件较大，在 clone 本项目时需参考 [https://git-lfs.github.com/](https://git-lfs.github.com/) 配置 Git LFS）
 
 #### 3. 申请和设置开发密钥
 
