@@ -139,11 +139,20 @@
      }];
 }
 
+#pragma mark - Setup
+
+- (void)setupMapView
+{
+    self.walkNaviView.naviMapView.centerCoordinate = CLLocationCoordinate2DMake(39.979602, 116.313972);
+}
+
 #pragma mark - Life Cycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    [self setupMapView];
     [self startRouteSearch];
 }
 
