@@ -105,6 +105,59 @@
     [self.walkNaviView.naviMapView addAnnotation:annotation];
 }
 
+#pragma mark - MapView Region
+
+- (void)updateMapViewRegionForNaviResult:(TWNWalkRouteSearchResult *)result
+{
+    [self updateIndoorInfoForNaviResult:result];
+    [self updateMapRectForNaviResult:result];
+}
+
+- (void)updateIndoorInfoForNaviResult:(TWNWalkRouteSearchResult *)result
+{
+    TWNWalkRouteSearchPlan *plan = [result.routes firstObject];
+    
+    // 设置为起点的楼层信息
+    if (plan.startPoint.buildingID)
+    {
+        QIndoorInfo *indoorInfo = [[QIndoorInfo alloc] initWithBuildUid:plan.startPoint.buildingID levelName:plan.startPoint.floorName];
+        [self.walkNaviView.naviMapView setActiveIndoorInfo:indoorInfo];
+    }
+}
+
+- (void)updateMapRectForNaviResult:(TWNWalkRouteSearchResult *)result
+{
+    QMapRect mapRect = [self boundingMapRectForNaviResult:result];
+    UIEdgeInsets padding = UIEdgeInsetsMake(20, 20, 20, 20);
+    
+    [self.walkNaviView.naviMapView setVisibleMapRect:mapRect edgePadding:padding animated:NO];
+}
+
+- (QMapRect)boundingMapRectForNaviResult:(TWNWalkRouteSearchResult *)result
+{
+    TWNWalkRouteSearchPlan *plan = [result.routes firstObject];
+    
+    // count 需要包含起终点
+    int count = (int)plan.pointsArray.count + 2;
+    
+    QMapPoint *mapPoint = (QMapPoint *)malloc(sizeof(QMapPoint) * count);
+    
+    for (int i = 0; i < count - 2; i++)
+    {
+        mapPoint[i] = QMapPointForCoordinate(plan.pointsArray[i].coordinate);
+    }
+    
+    // 将起终点加入数组
+    mapPoint[count - 2] = QMapPointForCoordinate(plan.startPoint.coordinate);
+    mapPoint[count - 1] = QMapPointForCoordinate(plan.destinationPoint.coordinate);
+    
+    QMapRect mapRect = QBoundingMapRectWithPoints(mapPoint, count);
+    
+    free(mapPoint);
+    
+    return mapRect;
+}
+
 #pragma mark - Route Search
 
 - (void)startRouteSearch
@@ -136,14 +189,10 @@
          
          // 绘制步行规划路线
          [weakSelf drawRouteLinesForNaviResult:result];
+         
+         // 设置地图可视区域
+         [weakSelf updateMapViewRegionForNaviResult:result];
      }];
-}
-
-#pragma mark - Setup
-
-- (void)setupMapView
-{
-    self.walkNaviView.naviMapView.centerCoordinate = CLLocationCoordinate2DMake(39.979602, 116.313972);
 }
 
 #pragma mark - Life Cycle
@@ -151,8 +200,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self setupMapView];
+
     [self startRouteSearch];
 }
 
