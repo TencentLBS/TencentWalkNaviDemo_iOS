@@ -61,6 +61,7 @@
 
 - startPoint：起点
 - destinationPoint：终点
+- searchOption:路线规划的策略
 
 路线规划的起终点类型为 `TWNWalkRouteSearchNaviPoi`，包含下列属性：
 
@@ -107,10 +108,15 @@ TWNWalkRouteSearchNaviPoi *destination = [[TWNWalkRouteSearchNaviPoi alloc] init
 	destination.coordinate = CLLocationCoordinate2DMake(39.958348,116.282312);
 }
 
+// 算路策略
+TWNWalkRouteSearchOption *searchOptions = [[TWNWalkRouteSearchOption alloc] init];
+searchOptions.costType = 1;
+
 // 请求
 TWNWalkRouteSearchRequest *request = [[TWNWalkRouteSearchRequest alloc] init];
 request.startPoint = start;
 request.destinationPoint = destination;
+request.searchOption = searchOptions;
 
 [self.walkManager searchNavigationRoutesWithRequest:request completion:^(TWNWalkRouteSearchResult *result, NSError *error)
 {
